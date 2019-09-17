@@ -1,0 +1,61 @@
+<%= simple_form_for @vehicle, html: {class: 'horizontal-form'}, validate: true do |f| %>
+  <% if vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+      <ul>
+        <% vehicle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+    <div class= "container">
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.input :name %>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :vehicle_class %>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :fuel_type %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.input :brand %>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :model_year %>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :fuel_capacity %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.input :model %>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :status %>
+        </div>
+        <div class="col-md-4">
+          <%= f.label :purchase_date %>
+          <%= f.date_field :purchase_date, class: 'form-control basicDate' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.input :code %>
+        </div>
+        <div class="col-md-4">
+          <%= f.input :driver_name, collection: available_drivers %>
+        </div>
+      </div>  
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    </div>
+    
+<% end %>

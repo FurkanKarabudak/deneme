@@ -1,0 +1,29 @@
+<%= simple_form_for @driver, html: {class: 'horizontal-form'}, validate: true do |f| %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.input :driver_name %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :driver_birthday %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :driver_tel %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.input :driver_surname %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :TC_NO %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :driver_adress %>
+    </div> 
+  </div> 
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>

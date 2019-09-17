@@ -1,0 +1,47 @@
+<%= simple_form_for @driver, html: {class: 'horizontal-form'}, validate: true do |f| %>
+  <p id="notice"><%= notice %></p>
+  <h4><i class="fa fa-truck fa-3x"></i> <%= @driver.driver_name %></h4>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>driver_namer</th>
+        <td><%= @driver.driver_name %></td>
+        <th>driver_surname</th>
+        <td><%= @driver.driver_surname %></td>
+        <th>driver_birthday</th>
+        <td><%= @driver.driver_birthday %></td>
+      </tr>
+      <tr>
+        <th>driver_TC_NO</th>
+        <td><%= @driver.TC_NO %></td>
+        <th>driver_tel</th>
+        <td><%= @driver.driver_tel %></td>
+        <th>driver_adress</th>
+        <td><%= @driver.driver_adress %></td>
+      </tr>
+    </thead>
+  </table>
+  <p>
+    <%= link_to 'Edit', edit_driver_path(@driver) %> |
+    <%= link_to 'Back', drivers_path %>
+  </p>
+  <h5>Yorumlar</h5>
+  <%= f.input :drivers_comments%>
+  <div>
+    <%= f.submit :save %>
+  </div>
+<table>
+  <thead>
+    <tr>
+      <th>drivers_comments</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        <td><%= @driver.drivers_comments %></td>
+      </tr>
+  </tbody>
+</table>
+<% end %>

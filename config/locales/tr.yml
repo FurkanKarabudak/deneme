@@ -1,0 +1,21 @@
+tr:
+  simple_form:
+    labels:
+      vehicle:
+        name: "Araç İsmi"
+        vehicle_class: "Araç Sınıfı"
+        fuel_type: "Yakıt Tipi"
+        brand: "Marka"
+        model_year: "Model-Yıl"
+        fuel_capacity: "Yakıt Kapasitesi"
+        model: "Model"
+        status: "Durumu"
+        purchase_date: "Satın Alma Tarihi"
+        code: "Plaka"
+      drivers:
+        driver_name: "Sürücü İsmi"
+        driver_surname: "Sürücü Soyismi"
+        driver_birthday: "Doğum Tarihi"
+        TC_NO: "TC Kimlik Numarası"
+        driver_tel: "Sürücü Numarası"
+        driver_adress: "Sürücü Adresi"
